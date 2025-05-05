@@ -45,6 +45,35 @@ This project explores the fascinating phenomenon of Wikipedia's "first link" pat
 - **Visualizations**: Article frequency, network structure, and path length distributions.
 - **Sample paths**: Real examples of how Wikipedia articles connect.
 
+## Visualizations & Insights
+
+### 1. Network Structure Analysis
+- **Spring Layout Graph**: Shows the complex interconnected nature of Wikipedia articles, with Philosophy often appearing as a central hub.
+- **Circular Layout Graph**: Provides a clear view of the hierarchical structure and clustering of related articles.
+- **Path Length Distribution**: Reveals that most paths converge to Philosophy within 3-7 steps, with an average path length of approximately 6.92 steps.
+
+### 2. Article Popularity & Connectivity
+- **Top Connected Articles**: Bar charts showing the most frequently visited articles in the network.
+- **Path Convergence**: Visual evidence of how diverse topics (from "Tap!" to "2024 in the European Union") eventually lead to common philosophical concepts.
+
+### 3. Sample Paths
+Here are some interesting paths discovered in our analysis:
+
+1. **Tap! → Magazine → Periodical literature → Publication**
+   - Demonstrates how specific topics (like a magazine) connect to broader categories.
+
+2. **2024 in the European Union → 2024 → Roman numerals → Numeral system**
+   - Shows how temporal concepts connect to fundamental mathematical systems.
+
+3. **Travel Counsellors → Travel agency → Retail → Goods**
+   - Illustrates the progression from specific services to general economic concepts.
+
+### 4. Database Statistics
+- **Scale**: Successfully crawled over 22,450 articles across 450 batches
+- **Database Size**: Maintained efficient storage at ~0.52GB out of 20GB limit
+- **Success Rate**: 98% of paths reached their target depth
+- **Unique Articles**: Approximately 52,507 unique articles in the database
+
 ## Lessons Learned
 - **Production-Grade Data Engineering**: Handling real-world database quirks, schema management, and large-scale data collection.
 - **Network Science**: Applying graph theory to real Wikipedia data.
