@@ -26,35 +26,48 @@ This project explores the fascinating phenomenon of Wikipedia's "first link" pat
 - **HTML Report**: Built a comprehensive, interactive HTML report using Jinja2 templates, combining statistics, sample paths, and all visualizations.
 - **Automation**: Finalized scripts so that running `python visualize_wiki_data.py` and `python generate_wiki_report.py` always produces an up-to-date, recruiter-ready report.
 
-## How to Use
+## ETL Process Overview
 
-1. **Start Oracle XE with Docker** (see `DOCUMENTATION.md` for details).
-2. **Run the Crawler**: Use the provided scripts to collect Wikipedia paths into the database.
-3. **Generate Visualizations**:
-   ```bash
-   python visualize_wiki_data.py
-   ```
-4. **Generate the Report**:
-   ```bash
-   python generate_wiki_report.py
-   open reports/wiki_path_report.html
-   ```
+The project follows a robust ETL (Extract, Transform, Load) pipeline:
 
-## What You'll See
-- **Key statistics**: Total paths, unique articles, network size, density, and more.
-- **Visualizations**: Article frequency, network structure, and path length distributions.
-- **Sample paths**: Real examples of how Wikipedia articles connect.
+- **Extraction**: Wikipedia articles are crawled using parallelized Python scripts (`src/crawlers/parallel_wiki_crawler.py`, `src/crawlers/large_wiki_graph_crawler.py`). The crawler follows the first link in each article, extracting paths and metadata.
+- **Transformation**: Extracted data is cleaned, normalized, and enriched. Path nodes are processed, and network relationships are built using scripts in `src/scripts/` and `src/analysis/`. Data is validated and deduplicated before loading.
+- **Loading**: Cleaned data is loaded into an Oracle database using `src/db/wiki_db_storage.py` and related scripts. The schema supports efficient querying and analytics, with tables for paths, nodes, and article metadata.
+- **Analysis & Visualization**: Analytical scripts (`src/analysis/analyze_wiki_paths.py`, `src/scripts/visualize_wiki_data.py`) generate insights and visualizations. Results are used for reporting and further exploration.
 
 ## Visualizations & Insights
 
 ### 1. Network Structure Analysis
-- **Spring Layout Graph**: Shows the complex interconnected nature of Wikipedia articles, with Philosophy often appearing as a central hub.
-- **Circular Layout Graph**: Provides a clear view of the hierarchical structure and clustering of related articles.
-- **Path Length Distribution**: Reveals that most paths converge to Philosophy within 3-7 steps, with an average path length of approximately 6.92 steps.
+
+- **Spring Layout Graph**
+  
+  ![Spring Layout Graph](visualizations/wiki_network_graph.png)
+  
+  Shows the complex interconnected nature of Wikipedia articles, with Philosophy often appearing as a central hub.
+
+- **Circular Layout Graph**
+  
+  ![Circular Layout Graph](visualizations/wiki_circular_network.png)
+  
+  Provides a clear view of the hierarchical structure and clustering of related articles.
+
+- **Path Length Distribution**
+  
+  ![Path Length Histogram](visualizations/path_length_histogram.png)
+  
+  Reveals that most paths converge to Philosophy within 3-7 steps, with an average path length of approximately 6.92 steps.
 
 ### 2. Article Popularity & Connectivity
-- **Top Connected Articles**: Bar charts showing the most frequently visited articles in the network.
-- **Path Convergence**: Visual evidence of how diverse topics (from "Tap!" to "2024 in the European Union") eventually lead to common philosophical concepts.
+
+- **Top Connected Articles**
+  
+  ![Article Frequency Bar Chart](visualizations/wiki_article_frequency.png)
+  
+  Bar chart showing the most frequently visited articles in the network.
+
+- **Path Convergence**
+  
+  Visual evidence of how diverse topics (from "Tap!" to "2024 in the European Union") eventually lead to common philosophical concepts.
 
 ### 3. Sample Paths
 Here are some interesting paths discovered in our analysis:
@@ -73,6 +86,44 @@ Here are some interesting paths discovered in our analysis:
 - **Database Size**: Maintained efficient storage at ~0.52GB out of 20GB limit
 - **Success Rate**: 98% of paths reached their target depth
 - **Unique Articles**: Approximately 52,507 unique articles in the database
+
+## Real ETL Results & Sample Paths
+
+The ETL pipeline has been run at multiple scales, from small test batches to large-scale crawls. Below are real crawl summaries and sample paths extracted from the process:
+
+### Example Crawl Summaries
+
+- **Small Batch (10 crawls, 2 steps average):**
+  - Target depth reached: 100%
+  - Total unique articles in database: ~30
+  - Sample paths:
+    1. Tap! (2 steps): Tap! → Magazine → Periodical literature
+    2. List of historic places in Regional Municipality of Waterloo (2 steps): List of historic places in Regional Municipality of Waterloo → Regional Municipality of Waterloo → Metropolitan area
+    3. Travel Counsellors (2 steps): Travel Counsellors → Travel agency → Retail
+
+- **Medium Batch (10 crawls, 2 steps average):**
+  - Target depth reached: 100%
+  - Total unique articles in database: ~49
+  - Sample paths:
+    1. Austin Ant (2 steps): Austin Ant → Four-wheel drive → Drivetrain
+    2. Lea Mendelssohn Bartholdy (2 steps): Lea Mendelssohn Bartholdy → Salon (gathering) → Horace
+    3. The Werewolf (play) (2 steps): The Werewolf (play) → Gladys Buchanan Unger → Broadway theatre
+
+- **Large Scale (50 crawls, 6.92 steps average):**
+  - Target depth reached: 98%
+  - Total unique articles in database: ~52,507
+  - Sample paths:
+    1. Summary jury trial (7 steps): Summary jury trial → Alternative dispute resolution → Dispute resolution → Party (law) → Individual → Entity → Existence → State of nature
+    2. 1970 North Rhine-Westphalia state election (7 steps): 1970 North Rhine-Westphalia state election → Landtag of North Rhine-Westphalia → Landtag → Legislative assembly → Legislature → British English → ...
+    3. Korostyshiv Raion (7 steps): Korostyshiv Raion → Raions of Ukraine → Romanization of Ukrainian → Ukrainian language → East Slavic languages → Slavic languages → Indo-European languages
+
+- **Overall Scale:**
+  - Over 22,450 articles crawled across 450 batches
+  - Database size: ~0.52GB out of 20GB limit
+  - Success rate: 98% of paths reached their target depth
+  - Unique articles: ~52,507 in the database
+
+These results demonstrate the robustness and scalability of the ETL process, as well as the diversity and depth of the Wikipedia path network captured in this project.
 
 ## Lessons Learned
 - **Production-Grade Data Engineering**: Handling real-world database quirks, schema management, and large-scale data collection.
