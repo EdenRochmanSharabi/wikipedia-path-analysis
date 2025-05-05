@@ -1,0 +1,6 @@
+SET PAGESIZE 100
+SET LINESIZE 100
+SET FEEDBACK ON
+SET HEADING ON
+
+SELECT table_name FROM all_tables WHERE owner = 'SYS' AND table_name LIKE 'WIKI_%';

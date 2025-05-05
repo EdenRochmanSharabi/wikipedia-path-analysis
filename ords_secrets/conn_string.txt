@@ -1,0 +1,1 @@
+CONN_STRING=sys/oracle@apexdatabase:1521/FREEPDB1

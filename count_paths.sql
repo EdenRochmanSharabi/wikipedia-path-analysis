@@ -1,0 +1,2 @@
+SELECT COUNT(*) AS total_paths FROM WIKI_PATHS;
+EXIT; 

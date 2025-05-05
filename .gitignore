@@ -1,0 +1,109 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+env/
+.venv/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# mypy
+.mypy_cache/
+.dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# VS Code
+.vscode/
+
+# Mac OS
+.DS_Store
+
+# Logs and local data
+*.log
+logs/
+*.sqlite3
+data/
+db.sqlite3
+*.db
+*.bak
+*.tmp
+*.swp
+
+# Docker
+*.pid
+*.pid.lock
+
+# Oracle dump files
+*.dmp
+*.log
+*.trc
+*.trm
+
+# Ignore secrets and local configs
+.env
+.env.*
+secrets/
+*.pem
+*.key
+*.crt
+
+# Ignore generated reports and images (keep only code, SQL, docs)
+visualizations/
+reports/
+
+# Ignore documentation build artifacts
+_build/
+
+# Ignore node modules (if any)
+node_modules/
+
+# Exclude legacy, backup, and experimental folders
+old_files/
+legacy/
+backup/
+experiments/
+test_data/
+tmp/ 

@@ -1,0 +1,35 @@
+When the APEX installation completes, run these commands to set up the admin account with username "admin" and password "admin":
+
+1. First, set up the APEX administrator account:
+
+```
+docker exec -i oracle-wiki-21c sqlplus / as sysdba << EOF
+alter session set container=XEPDB1;
+begin
+    apex_util.set_security_group_id(10);
+    apex_util.create_user(
+        p_user_name       => 'ADMIN',
+        p_email_address   => 'admin@example.com',
+        p_web_password    => 'admin',
+        p_developer_privs => 'ADMIN:CREATE:DATA_LOADER:EDIT:HELP:MONITOR:SQL',
+        p_change_password_on_first_use => 'N');
+    commit;
+end;
+/
+exit
+EOF
+```
+
+2. Then, access APEX through:
+   - URL: http://localhost:8080/apex
+   - Workspace: INTERNAL
+   - Username: admin
+   - Password: admin
+
+3. Database credentials for connecting from APEX:
+   - Database User: SYSTEM
+   - Database Password: The Oracle default password (typically "oracle")
+   - Connection Type: Basic
+   - Service Name: XEPDB1
+
+These credentials will give you full administrative access to APEX. 

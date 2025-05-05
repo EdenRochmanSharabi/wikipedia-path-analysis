@@ -1,0 +1,44 @@
+version: '3'
+
+services:
+  oracle-database:
+    container_name: apex-database
+    image: container-registry.oracle.com/database/free:latest
+    ports:
+      - "1521:1521"
+      - "5500:5500"
+    environment:
+      - ORACLE_PWD=oracle
+      - ORACLE_CHARACTERSET=AL32UTF8
+    volumes:
+      - apex-database-volume:/opt/oracle/oradata
+    networks:
+      - apex-network
+    hostname: apexdatabase
+    healthcheck:
+      test: ["CMD", "sqlplus", "-L", "sys/oracle@//localhost:1521/FREE as sysdba", "@healthcheck.sql"]
+      interval: 30s
+      timeout: 10s
+      retries: 10
+
+  oracle-ords:
+    container_name: apex-ords
+    image: container-registry.oracle.com/database/ords:latest
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./ords_secrets:/opt/oracle/variables
+      - ./ords_config:/etc/ords/config
+    networks:
+      - apex-network
+    depends_on:
+      oracle-database:
+        condition: service_healthy
+
+networks:
+  apex-network:
+    external: true
+
+volumes:
+  apex-database-volume:
+    external: true 

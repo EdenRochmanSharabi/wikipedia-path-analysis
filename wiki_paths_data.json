@@ -1,0 +1,409 @@
+{
+  "paths": [
+    {
+      "path_id": 1,
+      "start_article": "Philosophy",
+      "end_article": "Mathematics",
+      "steps": 4,
+      "succeeded": true,
+      "created": "2025-05-04 16:23:25.872218",
+      "nodes": [
+        {
+          "step": 0,
+          "title": "Philosophy",
+          "url": "https://en.wikipedia.org/wiki/Philosophy"
+        },
+        {
+          "step": 1,
+          "title": "Reality",
+          "url": "https://en.wikipedia.org/wiki/Reality"
+        },
+        {
+          "step": 2,
+          "title": "Science",
+          "url": "https://en.wikipedia.org/wiki/Science"
+        },
+        {
+          "step": 3,
+          "title": "Mathematics",
+          "url": "https://en.wikipedia.org/wiki/Mathematics"
+        }
+      ]
+    },
+    {
+      "path_id": 2,
+      "start_article": "Portrait of Mlle. Lange as Danae",
+      "end_article": "Painting",
+      "steps": 2,
+      "succeeded": true,
+      "created": "2025-05-04 18:23:41.882824",
+      "nodes": [
+        {
+          "step": 0,
+          "title": "Portrait of Mlle. Lange as Danae",
+          "url": "https://en.wikipedia.org/wiki/Portrait_of_Mlle._Lange_as_Danae"
+        },
+        {
+          "step": 1,
+          "title": "Anne-Louis Girodet de Roussy-Trioson",
+          "url": "https://en.wikipedia.org/wiki/Anne-Louis_Girodet_de_Roussy-Trioson"
+        },
+        {
+          "step": 2,
+          "title": "Painting",
+          "url": "https://en.wikipedia.org/wiki/Painting"
+        }
+      ]
+    },
+    {
+      "path_id": 3,
+      "start_article": "Jalen Beeks",
+      "end_article": "Bat-and-ball games",
+      "steps": 2,
+      "succeeded": true,
+      "created": "2025-05-04 18:23:41.917126",
+      "nodes": [
+        {
+          "step": 0,
+          "title": "Jalen Beeks",
+          "url": "https://en.wikipedia.org/wiki/Jalen_Beeks"
+        },
+        {
+          "step": 1,
+          "title": "Baseball",
+          "url": "https://en.wikipedia.org/wiki/Baseball"
+        },
+        {
+          "step": 2,
+          "title": "Bat-and-ball games",
+          "url": "https://en.wikipedia.org/wiki/Bat-and-ball_games"
+        }
+      ]
+    },
+    {
+      "path_id": 4,
+      "start_article": "USS Monongahela (1862)",
+      "end_article": "Sail",
+      "steps": 2,
+      "succeeded": true,
+      "created": "2025-05-04 18:23:44.783097",
+      "nodes": [
+        {
+          "step": 0,
+          "title": "USS Monongahela (1862)",
+          "url": "https://en.wikipedia.org/wiki/USS_Monongahela_(1862)"
+        },
+        {
+          "step": 1,
+          "title": "Barquentine",
+          "url": "https://en.wikipedia.org/wiki/Barkentine"
+        },
+        {
+          "step": 2,
+          "title": "Sail",
+          "url": "https://en.wikipedia.org/wiki/Sail"
+        }
+      ]
+    },
+    {
+      "path_id": 5,
+      "start_article": "UBPC",
+      "end_article": "Autonomy",
+      "steps": 2,
+      "succeeded": true,
+      "created": "2025-05-04 18:23:44.784667",
+      "nodes": [
+        {
+          "step": 0,
+          "title": "UBPC",
+          "url": "https://en.wikipedia.org/wiki/UBPC"
+        },
+        {
+          "step": 1,
+          "title": "Cooperative",
+          "url": "https://en.wikipedia.org/wiki/Cooperative"
+        },
+        {
+          "step": 2,
+          "title": "Autonomy",
+          "url": "https://en.wikipedia.org/wiki/Autonomy"
+        }
+      ]
+    },
+    {
+      "path_id": 6,
+      "start_article": "Abrahadabra",
+      "end_article": "Western esotericism",
+      "steps": 2,
+      "succeeded": true,
+      "created": "2025-05-04 18:23:47.578577",
+      "nodes": [
+        {
+          "step": 0,
+          "title": "Abrahadabra",
+          "url": "https://en.wikipedia.org/wiki/Abrahadabra"
+        },
+        {
+          "step": 1,
+          "title": "Thelema",
+          "url": "https://en.wikipedia.org/wiki/Thelema"
+        },
+        {
+          "step": 2,
+          "title": "Western esotericism",
+          "url": "https://en.wikipedia.org/wiki/Western_esotericism"
+        }
+      ]
+    },
+    {
+      "path_id": 7,
+      "start_article": "Austin Ant",
+      "end_article": "Drivetrain",
+      "steps": 2,
+      "succeeded": true,
+      "created": "2025-05-04 18:24:37.211749",
+      "nodes": [
+        {
+          "step": 0,
+          "title": "Austin Ant",
+          "url": "https://en.wikipedia.org/wiki/Austin_Ant"
+        },
+        {
+          "step": 1,
+          "title": "Four-wheel drive",
+          "url": "https://en.wikipedia.org/wiki/Four-wheel_drive"
+        },
+        {
+          "step": 2,
+          "title": "Drivetrain",
+          "url": "https://en.wikipedia.org/wiki/Drivetrain"
+        }
+      ]
+    },
+    {
+      "path_id": 8,
+      "start_article": "Lea Mendelssohn Bartholdy",
+      "end_article": "Horace",
+      "steps": 2,
+      "succeeded": true,
+      "created": "2025-05-04 18:24:37.430483",
+      "nodes": [
+        {
+          "step": 0,
+          "title": "Lea Mendelssohn Bartholdy",
+          "url": "https://en.wikipedia.org/wiki/Lea_Mendelssohn_Bartholdy"
+        },
+        {
+          "step": 1,
+          "title": "Salon (gathering)",
+          "url": "https://en.wikipedia.org/wiki/Salon_(gathering)"
+        },
+        {
+          "step": 2,
+          "title": "Horace",
+          "url": "https://en.wikipedia.org/wiki/Horace"
+        }
+      ]
+    },
+    {
+      "path_id": 9,
+      "start_article": "The Werewolf (play)",
+      "end_article": "Broadway theatre",
+      "steps": 2,
+      "succeeded": true,
+      "created": "2025-05-04 18:24:37.517622",
+      "nodes": [
+        {
+          "step": 0,
+          "title": "The Werewolf (play)",
+          "url": "https://en.wikipedia.org/wiki/The_Werewolf_(play)"
+        },
+        {
+          "step": 1,
+          "title": "Gladys Buchanan Unger",
+          "url": "https://en.wikipedia.org/wiki/Gladys_Unger"
+        },
+        {
+          "step": 2,
+          "title": "Broadway theatre",
+          "url": "https://en.wikipedia.org/wiki/Broadway_theatre"
+        }
+      ]
+    },
+    {
+      "path_id": 10,
+      "start_article": "Bakst",
+      "end_article": "Zhytomyr",
+      "steps": 2,
+      "succeeded": true,
+      "created": "2025-05-04 18:24:37.610447",
+      "nodes": [
+        {
+          "step": 0,
+          "title": "Bakst",
+          "url": "https://en.wikipedia.org/wiki/Bakst"
+        },
+        {
+          "step": 1,
+          "title": "Isaac Moses Bakst",
+          "url": "https://en.wikipedia.org/wiki/Isaac_Moses_Bakst"
+        },
+        {
+          "step": 2,
+          "title": "Zhytomyr",
+          "url": "https://en.wikipedia.org/wiki/Zhytomyr"
+        }
+      ]
+    },
+    {
+      "path_id": 11,
+      "start_article": "János Fónagy",
+      "end_article": "Executive (government)",
+      "steps": 2,
+      "succeeded": true,
+      "created": "2025-05-04 18:24:40.850084",
+      "nodes": [
+        {
+          "step": 0,
+          "title": "János Fónagy",
+          "url": "https://en.wikipedia.org/wiki/J%C3%A1nos_F%C3%B3nagy"
+        },
+        {
+          "step": 1,
+          "title": "Government of Hungary",
+          "url": "https://en.wikipedia.org/wiki/Government_of_Hungary"
+        },
+        {
+          "step": 2,
+          "title": "Executive (government)",
+          "url": "https://en.wikipedia.org/wiki/Executive_(government)"
+        }
+      ]
+    },
+    {
+      "path_id": 12,
+      "start_article": "An Ardent Heart (film)",
+      "end_article": "Romanization",
+      "steps": 2,
+      "succeeded": true,
+      "created": "2025-05-04 18:24:40.998452",
+      "nodes": [
+        {
+          "step": 0,
+          "title": "An Ardent Heart (film)",
+          "url": "https://en.wikipedia.org/wiki/An_Ardent_Heart_(film)"
+        },
+        {
+          "step": 1,
+          "title": "Romanization of Russian",
+          "url": "https://en.wikipedia.org/wiki/Romanization_of_Russian"
+        },
+        {
+          "step": 2,
+          "title": "Romanization",
+          "url": "https://en.wikipedia.org/wiki/Romanization"
+        }
+      ]
+    },
+    {
+      "path_id": 13,
+      "start_article": "Thief of Thieves",
+      "end_article": "American comic book",
+      "steps": 2,
+      "succeeded": true,
+      "created": "2025-05-04 18:24:41.034233",
+      "nodes": [
+        {
+          "step": 0,
+          "title": "Thief of Thieves",
+          "url": "https://en.wikipedia.org/wiki/Thief_of_Thieves"
+        },
+        {
+          "step": 1,
+          "title": "Image Comics",
+          "url": "https://en.wikipedia.org/wiki/Image_Comics"
+        },
+        {
+          "step": 2,
+          "title": "American comic book",
+          "url": "https://en.wikipedia.org/wiki/American_comic_book"
+        }
+      ]
+    },
+    {
+      "path_id": 14,
+      "start_article": "Elachista baltica",
+      "end_article": "Lepidoptera",
+      "steps": 2,
+      "succeeded": true,
+      "created": "2025-05-04 18:24:41.076092",
+      "nodes": [
+        {
+          "step": 0,
+          "title": "Elachista baltica",
+          "url": "https://en.wikipedia.org/wiki/Elachista_baltica"
+        },
+        {
+          "step": 1,
+          "title": "Moth",
+          "url": "https://en.wikipedia.org/wiki/Moth"
+        },
+        {
+          "step": 2,
+          "title": "Lepidoptera",
+          "url": "https://en.wikipedia.org/wiki/Lepidoptera"
+        }
+      ]
+    },
+    {
+      "path_id": 15,
+      "start_article": "Lamar Jordan",
+      "end_article": "Gridiron football",
+      "steps": 2,
+      "succeeded": true,
+      "created": "2025-05-04 18:24:44.113370",
+      "nodes": [
+        {
+          "step": 0,
+          "title": "Lamar Jordan",
+          "url": "https://en.wikipedia.org/wiki/Lamar_Jordan"
+        },
+        {
+          "step": 1,
+          "title": "American football",
+          "url": "https://en.wikipedia.org/wiki/American_football"
+        },
+        {
+          "step": 2,
+          "title": "Gridiron football",
+          "url": "https://en.wikipedia.org/wiki/Gridiron_football"
+        }
+      ]
+    },
+    {
+      "path_id": 16,
+      "start_article": "Mohamed Ali Mahjoubi",
+      "end_article": "Team sport",
+      "steps": 2,
+      "succeeded": true,
+      "created": "2025-05-04 18:24:44.458654",
+      "nodes": [
+        {
+          "step": 0,
+          "title": "Mohamed Ali Mahjoubi",
+          "url": "https://en.wikipedia.org/wiki/Mohamed_Ali_Mahjoubi"
+        },
+        {
+          "step": 1,
+          "title": "Association football",
+          "url": "https://en.wikipedia.org/wiki/Association_football"
+        },
+        {
+          "step": 2,
+          "title": "Team sport",
+          "url": "https://en.wikipedia.org/wiki/Team_sport"
+        }
+      ]
+    }
+  ]
+}
