@@ -111,4 +111,5 @@ tmp/
 # Exclude Oracle APEX and large binaries
 *.zip
 oracle_apex/
-ords_secrets/ 
+ords_secrets/ apex_23/
+oracle_apex/
