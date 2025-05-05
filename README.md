@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This project explores the fascinating phenomenon of Wikipedia's "first link" paths—where following the first link in each article often leads to the Philosophy page. The system is designed to crawl Wikipedia, store article paths in an Oracle database, and generate rich visualizations and reports to analyze the resulting network.
+This project explores the fascinating phenomenon of Wikipedia's "first link" paths, where following the first link in each article often leads to the Philosophy page. The system is designed to crawl Wikipedia, store article paths in an Oracle database, and generate rich visualizations and reports to analyze the resulting network.
 
 ## Technical Journey
 
