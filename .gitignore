@@ -106,4 +106,9 @@ legacy/
 backup/
 experiments/
 test_data/
-tmp/ 
+tmp/
+
+# Exclude Oracle APEX and large binaries
+*.zip
+oracle_apex/
+ords_secrets/ 
